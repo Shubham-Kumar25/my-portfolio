@@ -46,7 +46,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hemburger */}
-      <div onClick={handleClick} className="md:hidden z-10">
+      <div onClick={handleClick} className="z-10 md:hidden">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
@@ -90,32 +90,36 @@ const Navbar = () => {
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              target="_blank"
+              className="flex items-center justify-between w-full text-gray-300"
+              href="https://www.linkedin.com/in/shubham-sharmaaaa"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              target="_blank"
+              className="flex items-center justify-between w-full text-gray-300"
+              href="https://github.com/Shubham-Kumar25"
             >
               Github <FaGithub size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#1ab594]">
             <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              target="_blank"
+              className="flex items-center justify-between w-full text-gray-300 target:_blank"
+              href="mailto:ishubhamjnv@gmail.com"
             >
               Email <HiOutlineMail size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              className="flex items-center justify-between w-full text-gray-300"
+              href="https://drive.google.com/file/d/1kDcjEhXzXy80uzitYX9HxFEUO4Z1a8vn/view?usp=drive_link"
+              target="_blank"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
