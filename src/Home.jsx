@@ -1,13 +1,14 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Photo from "./assets/photo.png";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
     <div name="home" className="w-full h-screen bg-[#0a192f]">
       {/* Container */}
       <div className="flex max-w-[1000px] mx-auto h-full justify-center items-center">
-        <div className=" px-8 flex flex-col justify-center">
+        <div className="flex flex-col justify-center px-8 ">
           <p className="text-pink-600">Hi, my name is</p>
           <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
             Shubham Kumar
@@ -21,15 +22,17 @@ const Home = () => {
             on building responsive web applications.
           </p>
           <div>
-            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
-              View Work
-              <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight className="ml-3" />
-              </span>
-            </button>
+            <Link to="work" smooth={true} duration={500}>
+              <button className="flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-pink-600 hover:border-pink-600">
+                View Work
+                <span className="duration-300 group-hover:rotate-90">
+                  <HiArrowNarrowRight className="ml-3" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
-        <img className="w-64 h-64" src={Photo} alt="My Photo" />
+        <img className="hidden w-64 h-64 md:block" src={Photo} alt="My Photo" />
       </div>
     </div>
   );
