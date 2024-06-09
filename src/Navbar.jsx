@@ -18,7 +18,6 @@ const Navbar = () => {
       </div>
 
       {/* Menu */}
-
       <ul className="hidden md:flex">
         <li>
           <Link to="home" smooth={true} duration={500}>
@@ -47,7 +46,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Hemburger */}
+      {/* Hamburger */}
       <div onClick={handleClick} className="z-10 md:hidden">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
@@ -88,7 +87,11 @@ const Navbar = () => {
       </ul>
 
       {/* Social icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <div
+        className={`fixed flex flex-col top-[35%] ${
+          nav ? "left-0 md:left-0" : "md:left-0 left-[-200px]"
+        } transition-all duration-300`}
+      >
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
@@ -111,7 +114,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#1ab594]">
             <a
               target="_blank"
-              className="flex items-center justify-between w-full text-gray-300 target:_blank"
+              className="flex items-center justify-between w-full text-gray-300"
               href="mailto:ishubhamjnv@gmail.com"
             >
               Email <HiOutlineMail size={30} />
@@ -120,7 +123,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex items-center justify-between w-full text-gray-300"
-              href="https://drive.google.com/file/d/1P6FTmNBBV4GQeECT88yYYJFpp4cNvYTT/view?usp=sharing"
+              href="https://drive.google.com/file/d/1kCgwWE8xSE-IJ6qUUB1EXbFZ6icTcRKQ/view?usp=sharing"
               target="_blank"
             >
               Resume <BsFillPersonLinesFill size={30} />
